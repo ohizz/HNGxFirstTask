@@ -19,3 +19,7 @@ img{
  flex-direction: column;
  min-height: 90vh;
 }
+
+h1{
+ text-transform: uppercase;
+}
