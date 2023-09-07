@@ -9,22 +9,38 @@
 </head>
 <body>
     <div class="container">
-    <h1 data-testid="slackUserName">ohis samuel</h1>
-    <img src="assests/ohis.jpg" data-testid="slackDisplayImage" alt="ohis samuel"/>
-    <p id="currentDay"  data-testid="currentDayOfTheWeek">current day of the week</p>
-    <p data-testid="currentUTCTime" id="currentUTC">UTC</p>
-    <p data-testid="myTrack"
-    >Frontend</p>
-    <a data-testid=“githubURL” href="https://github.com/ohizz/HNGxFirstTask">github Repository</a>
+        <h1 class="heading" data-testid="slackUserName">ohis babatunde samuel</h1>
+    <div class="containerBody">
+        <img src="assests/ohis.jpg" data-testid="slackDisplayImage" alt="ohis babatunde samuel"/>
+        <div class="text">
+            <p id="currentDay"  data-testid="currentDayOfTheWeek">current day of the week</p>
+            <p data-testid="currentUTCTime" id="currentUTC">UTC</p>
+            <p data-testid="myTrack"
+            >Frontend</p>
+            <a data-testid="githubURL" href="https://github.com/ohizz/HNGxFirstTask" target="_blank">source code</a>
+        
+  </div>
+ </div>
+</div>
+<script>
+ let days = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
+ let date = new Date();
+ let currentDate = date.getDay();
+ document.getElementById("currentDay").innerHTML =  days[currentDate];
 
-    </div>
-    <script>
-        let days = ["Sunday","Monday","Tuesday","Wednesday ","Thursday","Friday","Saturday"];
-         let date = new Date();
-         let currentDate = date.getDay();
-         let currentUTC = Date(Date.UTC(2023, 9, 7));
-         document.getElementById("currentDay").innerHTML =  days[currentDate];
-         document.getElementById("currentUTC").innerHTML = currentUTC;
-         </script>
+function twentyFourHours(number) {
+  return String(number).length === 1 ? `0${number}`: number;
+}
+
+function time(){
+ const date = new Date();
+ let currentUTCHour = twentyFourHours(date.getUTCHours());
+ let currentUTCMinute = twentyFourHours(date.getUTCMinutes());
+ let currentUTCSecond = twentyFourHours(date.getUTCSeconds());
+ document.getElementById("currentUTC").innerHTML = [currentUTCHour, currentUTCMinute, currentUTCSecond].join(':')
+ setTimeout(time, 1000)
+}
+ time();
+ </script>
 </body>
 </html>
