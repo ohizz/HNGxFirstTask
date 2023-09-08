@@ -30,17 +30,11 @@
  let currentDate = date.getDay();
  document.getElementById("currentDay").innerHTML =  days[currentDate];
 
-function twelve(number) {
-  return String(number).length === 1 ? `0${number}`: number;
-}
 
 function time(){
  const date = new Date();
- let currentUTCHour = twelve(date.getUTCHours());
- let currentUTCMinute = twelve(date.getUTCMinutes());
- let currentUTCSecond = twelve(date.getUTCSeconds());
-//  let currentUTCMilliSecond = twelve(date.getUTCMilliseconds());
- document.getElementById("currentUTC").innerHTML = [currentUTCHour, currentUTCMinute, currentUTCSecond].join(':')
+//   date.getTime()
+ document.getElementById("currentUTC").innerHTML = date.getTime()
  setTimeout(time, 1000)
 }
  time();
