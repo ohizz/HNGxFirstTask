@@ -39,8 +39,8 @@ function time(){
  let currentUTCHour = twelve(date.getUTCHours());
  let currentUTCMinute = twelve(date.getUTCMinutes());
  let currentUTCSecond = twelve(date.getUTCSeconds());
- let currentUTCMilliSecond = twelve(date.getUTCMilliseconds());
- document.getElementById("currentUTC").innerHTML = [currentUTCHour, currentUTCMinute, currentUTCSecond, currentUTCMilliSecond].join(':')
+//  let currentUTCMilliSecond = twelve(date.getUTCMilliseconds());
+ document.getElementById("currentUTC").innerHTML = [currentUTCHour, currentUTCMinute, currentUTCSecond].join(':')
  setTimeout(time, 1000)
 }
  time();
