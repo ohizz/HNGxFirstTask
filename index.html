@@ -33,10 +33,11 @@
 
 function time(){
  const date = new Date();
- document.getElementById("currentUTC").innerHTML = date.getTime()
- setTimeout(time, 1000)
+ const utc = date.getUTCMilliseconds(date)
+ document.getElementById("currentUTC").textContent = `${utc}ms`;
+
 }
- time();
+setInterval(time, 1000)
  </script>
 </body>
 </html>
