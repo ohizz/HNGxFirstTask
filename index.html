@@ -31,8 +31,7 @@
  document.getElementById("currentDay").innerHTML =  days[currentDate];
 
 function getTime(){
- const date = new Date();
- const utc = date.getUTCMilliseconds(date)
+ const utc = Date.now()
  document.getElementById("currentUTC").innerHTML = `${utc}ms`;
 }
 
