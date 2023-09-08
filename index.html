@@ -30,13 +30,13 @@
  let currentDate = date.getDay();
  document.getElementById("currentDay").innerHTML =  days[currentDate];
 
-
-function time(){
+function getTime(){
  const date = new Date();
  const utc = date.getUTCMilliseconds(date)
  document.getElementById("currentUTC").innerHTML = `${utc}ms`;
 }
-setInterval(time, 1000)
+
+setInterval(getTime, 1000)
  </script>
 </body>
 </html>
