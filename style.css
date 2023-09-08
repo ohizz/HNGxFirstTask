@@ -80,7 +80,7 @@ a:hover{
 
 @media screen and (min-width: 780px) {
  .text {
- /* width: 50%; */
+ width: 50%;
  margin-left: 40px;
  padding: 0;
  text-align: left;
