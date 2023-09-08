@@ -18,7 +18,6 @@ img{
 }
 
 @media screen and (min-width: 600px) {
-
  .image {
  padding: 0;
  }
@@ -47,15 +46,21 @@ img{
 
 @media screen and (min-width: 600px) {
 .containerBody {
-    flex-direction: row;
+ flex-direction: row;
  }
 }
 
 .heading{
  text-transform: uppercase;
- font-size: 6vw;
- padding: 10px 0;
+ font-size: 1.5rem;
+ padding: 25px 0;
  text-align: center;
+}
+
+@media screen and (min-width: 600px){
+ .heading{
+ font-size:3rem
+ }
 }
 
 a{
